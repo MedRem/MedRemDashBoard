@@ -27,7 +27,7 @@
     }
 
     &[data-background-color="black"]{
-        background-color: #191919;
+        background-color: white;
     }
     .logo-img{
         width: 35px;
@@ -37,9 +37,10 @@
         margin-right: 15px;
 
         img{
-            width: 35px;
-            top: 16px;
+            width: 135px;
+            top: 0;
             position: absolute;
+            left: 0;
         }
     }
     .sidebar-wrapper{
@@ -233,8 +234,9 @@
             height: 100%;
             content: "";
             display: block;
-            background: #FFFFFF;
-            opacity: .93;
+            background: rgba(0, 74, 67, 1);
+        //    background: linear-gradient(9deg, rgba(0, 74, 67, 1) 10%, rgba(0, 74, 67, 1) 30%, rgba(10, 86, 84, 1) 47%, rgba(54, 144, 166, 1) 89%);
+            opacity: .90;
         }
     }
 
@@ -243,7 +245,7 @@
         margin: 0;
         display: block;
         position: relative;
-        z-index: 4;
+        z-index: 2;
 
         &:after{
             content: '';
@@ -252,7 +254,8 @@
             right: 15px;
             height: 1px;
             width: calc(100% - 30px);
-            background-color: rgba(180,180,180, .3);
+            // background: linear-gradient(9deg, rgba(0, 74, 67, 1) 10%, rgba(0, 74, 67, 1) 30%, rgba(10, 86, 84, 1) 47%, rgba(54, 144, 166, 1) 89%);
+
 
         }
 
@@ -265,11 +268,11 @@
         }
 
         .simple-text{
-            text-transform: uppercase;
+            // text-transform: uppercase;
             padding: $padding-small-vertical $padding-zero;
             display: inline-block;
             font-size: 18px;
-            color: $black-color;
+            color: white;
             white-space: nowrap;
             font-weight: $font-weight-default;
             line-height: 30px;
@@ -283,14 +286,14 @@
         border-radius: 50%;
         border: 1px solid #333;
         display: block;
-        height: 61px;
-        width: 61px;
+        height: 161px;
+        width: 161px;
         float: left;
         overflow: hidden;
 
         img{
-            width: 60px;
-            height: 60px;
+            width: 160px;
+            height: 160px;
         }
     }
 
@@ -334,14 +337,14 @@
         .logo,
         .nav li.separator{
             &:after{
-                background-color: rgba(255,255,255, .3);
+                background-color: white;
             }
         }
 
         .nav{
             li:hover:not(.active) > a,
             li.active > [data-toggle="collapse"]{
-                background-color: rgba(255, 255, 255, 0.1);
+                background-color: white;
             }
         }
     }
@@ -362,7 +365,7 @@
 
         > li > a:focus,
         > li > a:hover{
-            background: rgba(200, 200, 200, 0.2);
+            background:white;
         }
     }
 }
