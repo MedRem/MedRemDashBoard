@@ -22,17 +22,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     public rammmadService: RammmadService
-  ) {
-    // test cosole logs
-    // this.users = this.rammmadService.getallusers();
-    // this.allspecialist = this.rammmadService.getallspecialist();
-    // this.appoint = this.rammmadService.getAppointment();
-    // this.meds = this.rammmadService.getMedication();
-    // console.log(this.users);
-    // console.log(this.allspecialist);
-    // console.log(this.appoint);
-    // console.log(this.meds);
-   }
+  ) { }
 
   startAnimationForLineChart(chart){
       let seq: any, delays: any, durations: any;

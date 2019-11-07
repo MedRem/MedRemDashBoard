@@ -33,11 +33,14 @@ alluserArray = [];
 allspecialist: any;
 appoint: any;
 meds: any;
+kin: any;
 
 userCount: any;
 specialistCount: any;
 appointCount: any;
 medsCount: any
+
+
 
   constructor() { }
 
@@ -254,6 +257,18 @@ getAppointment() {
         resolve(this.medsCount);
       })
     })
+  }
+
+  getNextofKin() {
+    return new Promise((resolve, reject) => {
+      this.kin;
+      const dataz = firebase.database().ref('Kin/');
+      dataz.on('value', (snap) => {
+        this.kin = snap.val();
+        // console.log(this.kin);
+        resolve(this.kin);
+        });
+      });
   }
 
 }

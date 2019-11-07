@@ -5,7 +5,7 @@
               <div class="card">
                   <div class="card-header card-header-danger">
                       <h4 class="card-title ">Registered Users</h4>
-                      <p class="card-category"> Here is a subtitle for this table</p>
+                      <!-- <p class="card-category"> Here is a subtitle for this table</p> -->
                   </div>
                   <div class="card-body">
                       <div class="table-responsive">
@@ -21,30 +21,36 @@
                                       Location
                                   </th>
                                   <th>
-                                      Next of Kin
+                                      Contact
                                   </th>
                                   <th>
-                                      Contact
+                                      Gender
+                                  </th>
+                                  <th>
+                                      Email
                                   </th>
                               </thead>
                               <tbody>
                                  
-                                  <tr>
+                                  <tr *ngFor="let userd of users">
                                       <td>
                                           6
                                       </td>
                                       <td>
-                                          Mason Porter
+                                          {{ userd.username }} {{ userd.surnamez }}
                                       </td>
                                       <td>
-                                          Chile
-                                      </td>
-                                      <td>
-                                          Gloucester
+                                          {{ userd.locationz }}
                                       </td>
                                       <td class="text-primary">
-                                          $78,615
+                                          {{ userd.contactz }}
                                       </td>
+                                      <td>
+                                        {{ userd.genderz }}
+                                    </td>
+                                    <td>
+                                        {{ userd.emails }}
+                                    </td>
                                       <td class="td-actions text-right">
                                         <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
                                             <i class="material-icons">edit</i>
@@ -64,7 +70,7 @@
             <div class="card">
                 <div class="card-header card-header-danger">
                     <h4 class="card-title ">Registered Specialist</h4>
-                    <p class="card-category"> Here is a subtitle for this table</p>
+                    <!-- <p class="card-category"> Here is a subtitle for this table</p> -->
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -94,27 +100,27 @@
                             </thead>
                             <tbody>
                                
-                                <tr>
+                                <tr *ngFor="let specialist of allspecialist">
                                     <td>
                                         1
                                     </td>
                                     <td>
-                                        Dr
+                                        {{ specialist.Title }}
                                     </td>
                                     <td>
-                                        Dan Mahlangu
+                                        {{ specialist.Name }} {{ specialist.Surname }}
                                     </td>
                                     <td>
-                                        01102843
+                                        {{ specialist.Contact }}
                                     </td>
                                     <td >
-                                        Physio
+                                        {{ specialist.Specialisation }}
                                     </td>
                                     <td >
-                                        4.5
+                                        {{ specialist.Rating }}
                                     </td>
                                     <td >
-                                        Tembisa
+                                        {{ specialist.Location }}
                                     </td>
                                     <td class="td-actions text-right">
                                       <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
