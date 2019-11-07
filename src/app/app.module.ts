@@ -18,10 +18,29 @@ import { IconsComponent } from './icons/icons.component';
 import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
+
 import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import * as firebase from 'firebase/app';
+import { LoginComponent } from './login/login.component';
+import { SigninComponent } from './signin/signin.component';
+
+import {MatGridListModule} from '@angular/material/grid-list';
+
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyB3yq4yZ3H-QgKalI0M6nTp9nmVqZpBjYI",
+  authDomain: "medrem-b28df.firebaseapp.com",
+  databaseURL: "https://medrem-b28df.firebaseio.com",
+  projectId: "medrem-b28df",
+  storageBucket: "medrem-b28df.appspot.com",
+  messagingSenderId: "376919890463",
+  appId: "1:376919890463:web:0d42b76f22dcf6e193532a"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 @NgModule({
   imports: [
@@ -31,6 +50,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     HttpModule,
     ComponentsModule,
     RouterModule,
+    MatGridListModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
@@ -39,6 +59,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    LoginComponent,
+    SigninComponent,
 
   ],
   providers: [],

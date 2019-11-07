@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
+import * as firebase from 'firebase';
+import { RammmadService } from 'app/Service/rammmad.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +10,30 @@ import * as Chartist from 'chartist';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  users;
+  allspecialist;
+  appoint;
+  meds;
+
+  userCount: any;
+  specialistCount: any;
+  appointCount: any;
+  medsCount: any;
+
+  constructor(
+    public rammmadService: RammmadService
+  ) {
+    // test cosole logs
+    // this.users = this.rammmadService.getallusers();
+    // this.allspecialist = this.rammmadService.getallspecialist();
+    // this.appoint = this.rammmadService.getAppointment();
+    // this.meds = this.rammmadService.getMedication();
+    // console.log(this.users);
+    // console.log(this.allspecialist);
+    // console.log(this.appoint);
+    // console.log(this.meds);
+   }
+
   startAnimationForLineChart(chart){
       let seq: any, delays: any, durations: any;
       seq = 0;
@@ -65,7 +90,50 @@ export class DashboardComponent implements OnInit {
 
       seq2 = 0;
   };
+
   ngOnInit() {
+    // getting displaying infor
+    this.rammmadService.getallusers().then(users => {
+      this.users = users;
+      // console.log( this.users);
+    })
+
+    this.rammmadService.getallspecialist().then(specialist => {
+      this.allspecialist = specialist;
+      // console.log( this.allspecialist);
+    })
+
+    this.rammmadService.getAppointment().then(appoint => {
+      this.appoint = appoint;
+      // console.log( this.appoint);
+    })
+
+    this.rammmadService.getMedication().then(medss => {
+      this.meds = medss;
+      // console.log( this.meds);
+    })
+
+    // getting numbers
+    this.rammmadService.CountUsers().then(countusers => {
+      this.userCount = countusers;
+      // console.log( this.userCount);
+    })
+
+    this.rammmadService.CountSpecialist().then(countspecialist => {
+      this.specialistCount = countspecialist;
+      // console.log( this.specialistCount);
+    })
+
+    this.rammmadService.CountAppoints().then(countappoint => {
+      this.appointCount = countappoint;
+      console.log( this.appointCount);
+    })
+
+    this.rammmadService.CountMeds().then(countmeds => {
+      this.medsCount = countmeds;
+      console.log( this.medsCount);
+    })
+
       /* ----------==========     Daily Sales Chart initialization For Documentation    ==========---------- */
 
       const dataDailySalesChart: any = {
