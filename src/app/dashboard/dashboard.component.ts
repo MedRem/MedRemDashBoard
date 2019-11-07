@@ -116,20 +116,20 @@ export class DashboardComponent implements OnInit {
 
     this.rammmadService.CountAppoints().then(countappoint => {
       this.appointCount = countappoint;
-      console.log( this.appointCount);
+      // console.log( this.appointCount);
     })
 
     this.rammmadService.CountMeds().then(countmeds => {
       this.medsCount = countmeds;
-      console.log( this.medsCount);
+      // console.log( this.medsCount);
     })
 
       /* ----------==========     Daily Sales Chart initialization For Documentation    ==========---------- */
 
       const dataDailySalesChart: any = {
-          labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+          labels: ['Tembisa', 'Soweto', 'Johannesburg', 'Pretoria'],
           series: [
-              [12, 17, 7, 17, 23, 18, 38]
+              [5, 3, 1, 1]
           ]
       };
 
@@ -138,7 +138,7 @@ export class DashboardComponent implements OnInit {
               tension: 0
           }),
           low: 0,
-          high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+          high: 7, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
           chartPadding: { top: 0, right: 0, bottom: 0, left: 0},
       }
 
@@ -150,9 +150,9 @@ export class DashboardComponent implements OnInit {
       /* ----------==========     Completed Tasks Chart initialization    ==========---------- */
 
       const dataCompletedTasksChart: any = {
-          labels: ['12p', '3p', '6p', '9p', '12p', '3a', '6a', '9a'],
+          labels: ['Neurologists"', 'Dermatologists', 'Allergists'],
           series: [
-              [230, 750, 450, 300, 280, 240, 200, 190]
+              [3, 3, 4]
           ]
       };
 
@@ -161,7 +161,7 @@ export class DashboardComponent implements OnInit {
               tension: 0
           }),
           low: 0,
-          high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+          high: 5, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
           chartPadding: { top: 0, right: 0, bottom: 0, left: 0}
       }
 

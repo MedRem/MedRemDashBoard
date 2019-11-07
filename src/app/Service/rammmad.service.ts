@@ -66,7 +66,7 @@ return firebase.auth().createUserWithEmailAndPassword(email, password).then((use
     this.userId = user['user'].uid;
     this.userDocumentNo = user['user'].uid;
     this.email = user['user'].email;
-    console.log(this.userDocumentNo);
+    // console.log(this.userDocumentNo);
 
   // inserting into database
     firebase.database().ref('users/' + this.userId).set({
@@ -165,7 +165,7 @@ CountUsers() {
       for(let users in userList) {
         this.userCount = this.userCount + 1;
       }
-      console.log(this.userCount);
+      // console.log(this.userCount);
       resolve(this.userCount);
     })
     });
@@ -191,7 +191,7 @@ CountSpecialist() {
       for (let specialistlist in speclist) {
         this.specialistCount = this.specialistCount + 1;
       }
-      console.log(this.specialistCount);
+      // console.log(this.specialistCount);
       resolve(this.specialistCount);
     })
   })
@@ -246,14 +246,14 @@ getAppointment() {
     return new Promise((resolve) => {
       let medz: any;
       this.getMedication().then(medss => {
-        console.log(medss);
+        // console.log(medss);
         medz = medss
         for (let med in medz) {
           for (let pills in medz[med]) {
             this.medsCount = this.medsCount + 1
           }
         }
-        console.log(this.medsCount);
+        // console.log(this.medsCount);
         resolve(this.medsCount);
       })
     })
