@@ -4,7 +4,7 @@
           <div class="col-md-12">
               <div class="card">
                   <div class="card-header card-header-danger">
-                      <h4 class="card-title ">Simple Table</h4>
+                      <h4 class="card-title ">Registered Users</h4>
                       <p class="card-category"> Here is a subtitle for this table</p>
                   </div>
                   <div class="card-body">
@@ -12,107 +12,23 @@
                           <table class="table">
                               <thead class=" text-primary">
                                   <th>
-                                      ID
+                                      #
                                   </th>
                                   <th>
-                                      Name
+                                      Name and Surname
                                   </th>
                                   <th>
-                                      Country
+                                      Location
                                   </th>
                                   <th>
-                                      City
+                                      Next of Kin
                                   </th>
                                   <th>
-                                      Salary
+                                      Contact
                                   </th>
                               </thead>
                               <tbody>
-                                  <tr>
-                                      <td>
-                                          1
-                                      </td>
-                                      <td>
-                                          Dakota Rice
-                                      </td>
-                                      <td>
-                                          Niger
-                                      </td>
-                                      <td>
-                                          Oud-Turnhout
-                                      </td>
-                                      <td class="text-primary">
-                                          $36,738
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          2
-                                      </td>
-                                      <td>
-                                          Minerva Hooper
-                                      </td>
-                                      <td>
-                                          Curaçao
-                                      </td>
-                                      <td>
-                                          Sinaai-Waas
-                                      </td>
-                                      <td class="text-primary">
-                                          $23,789
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          3
-                                      </td>
-                                      <td>
-                                          Sage Rodriguez
-                                      </td>
-                                      <td>
-                                          Netherlands
-                                      </td>
-                                      <td>
-                                          Baileux
-                                      </td>
-                                      <td class="text-primary">
-                                          $56,142
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          4
-                                      </td>
-                                      <td>
-                                          Philip Chaney
-                                      </td>
-                                      <td>
-                                          Korea, South
-                                      </td>
-                                      <td>
-                                          Overland Park
-                                      </td>
-                                      <td class="text-primary">
-                                          $38,735
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          5
-                                      </td>
-                                      <td>
-                                          Doris Greene
-                                      </td>
-                                      <td>
-                                          Malawi
-                                      </td>
-                                      <td>
-                                          Feldkirchen in Kärnten
-                                      </td>
-                                      <td class="text-primary">
-                                          $63,542
-                                      </td>
-                                  </tr>
+                                 
                                   <tr>
                                       <td>
                                           6
@@ -129,6 +45,14 @@
                                       <td class="text-primary">
                                           $78,615
                                       </td>
+                                      <td class="td-actions text-right">
+                                        <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                            <i class="material-icons">edit</i>
+                                        </button>
+                                        <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                            <i class="material-icons">close</i>
+                                        </button>
+                                    </td>
                                   </tr>
                               </tbody>
                           </table>
@@ -137,9 +61,80 @@
               </div>
           </div>
           <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-danger">
+                    <h4 class="card-title ">Registered Specialist</h4>
+                    <p class="card-category"> Here is a subtitle for this table</p>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Tittle
+                                </th>
+                                <th>
+                                    Name and Surname
+                                </th>
+                                <th>
+                                    Contact
+                                </th>
+                                <th>
+                                    Specialisation
+                                </th>
+                                <th>
+                                    Ratting
+                                </th>
+                                <th>
+                                    Location
+                                </th>
+                            </thead>
+                            <tbody>
+                               
+                                <tr>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        Dr
+                                    </td>
+                                    <td>
+                                        Dan Mahlangu
+                                    </td>
+                                    <td>
+                                        01102843
+                                    </td>
+                                    <td >
+                                        Physio
+                                    </td>
+                                    <td >
+                                        4.5
+                                    </td>
+                                    <td >
+                                        Tembisa
+                                    </td>
+                                    <td class="td-actions text-right">
+                                      <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                          <i class="material-icons">edit</i>
+                                      </button>
+                                      <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                          <i class="material-icons">close</i>
+                                      </button>
+                                  </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <!-- <div class="col-md-12">
               <div class="card card-plain">
                   <div class="card-header card-header-danger">
-                      <h4 class="card-title mt-0"> Table on Plain Background</h4>
+                      <h4 class="card-title mt-0"> Registered Specialist</h4>
                       <p class="card-category"> Here is a subtitle for this table</p>
                   </div>
                   <div class="card-body">
@@ -147,19 +142,25 @@
                           <table class="table table-hover">
                               <thead class="">
                                   <th>
-                                      ID
+                                      #
                                   </th>
                                   <th>
-                                      Name
+                                      Tittle
                                   </th>
                                   <th>
-                                      Country
+                                      Name and Surname
                                   </th>
                                   <th>
-                                      City
+                                      Locationn
                                   </th>
                                   <th>
-                                      Salary
+                                      Specialisation
+                                  </th>
+                                  <th>
+                                    Ratting
+                                  </th>
+                                  <th>
+                                    Contact
                                   </th>
                               </thead>
                               <tbody>
@@ -179,6 +180,14 @@
                                       <td>
                                           $36,738
                                       </td>
+                                      <td class="td-actions text-right">
+                                        <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                            <i class="material-icons">edit</i>
+                                        </button>
+                                        <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                            <i class="material-icons">close</i>
+                                        </button>
+                                    </td>
                                   </tr>
                                   <tr>
                                       <td>
@@ -270,7 +279,7 @@
                       </div>
                   </div>
               </div>
-          </div>
+          </div> -->
       </div>
   </div>
 </div>
