@@ -234,8 +234,8 @@
             height: 100%;
             content: "";
             display: block;
-            background: rgba(0, 74, 67, 1);
-        //    background: linear-gradient(9deg, rgba(0, 74, 67, 1) 10%, rgba(0, 74, 67, 1) 30%, rgba(10, 86, 84, 1) 47%, rgba(54, 144, 166, 1) 89%);
+            // background: rgba(0, 74, 67, 1);
+           background: linear-gradient(9deg, rgba(0, 74, 67, 1) 10%, rgba(0, 74, 67, 1) 30%, rgba(10, 86, 84, 1) 47%, rgba(54, 144, 166, 1) 98%);
             opacity: .90;
         }
     }
@@ -500,7 +500,7 @@
           position: absolute;
           width: 100%;
           bottom: 13px;
-        }
+        }   
       }
     }
 }
