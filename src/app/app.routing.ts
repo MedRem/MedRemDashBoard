@@ -18,7 +18,10 @@ const routes: Routes =[
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
     }]
   },
+<<<<<<< HEAD
   // { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+=======
+>>>>>>> 6b4f4d908c644e34d5427e8fe15813de686e8962
 ];
 
 @NgModule({
